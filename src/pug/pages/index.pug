@@ -1,0 +1,169 @@
+extends .././layouts/main-layout.pug
+block content
+    main.main
+        section.start-screen
+            .start-screen__paralax-wrapper
+                .start-screen__wrapper.container
+                    .start-screen__title-wrapper
+                        h1.start-screen__title
+                            | Препараты для роста
+                            br
+                            span.start-screen__title-red-element.red-span
+                                | spectrum pharm 
+                            span.start-screen__umper
+                                |  &#38;
+                            br
+                            span.start-screen__title-red-element.red-span
+                                | Zhengzhou Pharmaceutical
+                        .start-screen__btn-wrapper.btn-wrapper
+                        a.buy-btn(href="#")
+                            | Купить сейчас
+                        a.telegramm-btn(href="tg://@antpzk")
+                            | Заказать в telegramm
+        section.about-us
+            .about-us__paralax-wrapper
+                .about-us__wrapper.container
+                    .about-us__content
+                        h2.about-us__title.mini-title
+                            | O нас
+                        p.about-us__txt
+                            | Компания STEROID-HOUSE более 7ми лет занимается
+                            | поставками анаболических препаратов в Украину 
+                            | и страны СНГ. Мы сотрудничаем напрямую с производителями представленными
+                            | на нашем сайте. По этому мы можем предлагать
+                            | нашим клиентам самые низкие цены на рынке.
+                        p.about-us__txt    
+                            | Продаваемая нами продукция имеет все соответствующие сертификаты и 
+                            | и водные знаки качества. В упаковках с препаратами имеется
+                            | инструкция к правильному применению препарата. Так же наши консультанты
+                            | могут составить вам индивидуальную программу тренировок и помогут максимально
+                            | Правильно и оптимально подобрать нужные препараты и дозировку.
+                            | По ссылке ниже вы можете скачать нас прайс-лист.
+                        .about-us__btn-wrapper.btn-wrapper
+                            a.about-us__download-link(href="#")
+                                |Скачать прайс лист
+                            a.telegramm-btn(href="tg://@antpzk")
+                                | Заказать в telegramm
+        section.advantages
+            .advantages__paralax-wrapper
+                .advantages__wrapper.container
+                    h2.advantages__title.mini-title
+                        | Наши
+                        br
+                        | преимущества
+                    ul.advantages__list
+                        li.advantages__list-item
+                            p.advantages__list-title
+                                | Скорость
+                            P.advantages__txt
+                                | Lorem ipsum dolor sit amet consectetur
+                                | adipisicing elit. Consectetur earum dignissimos
+                                | nostrum illo accusantium ducimus recusandae facilis
+                                | assumenda hic vitae? Dolorum deserunt 
+                                | sit rerum quos rem iure fuga libero quo.
+                        li.advantages__list-item
+                            p.advantages__list-title
+                                | Низкие цены
+                            P.advantages__txt
+                                | Lorem ipsum dolor sit amet consectetur
+                                | adipisicing elit. Consectetur earum dignissimos
+                                | nostrum illo accusantium ducimus recusandae facilis
+                                | assumenda hic vitae? Dolorum deserunt 
+                                | sit rerum quos rem iure fuga libero quo.
+                        li.advantages__list-item
+                            p.advantages__list-title
+                                | Качество
+                            P.advantages__txt
+                                | Lorem ipsum dolor sit amet consectetur
+                                | adipisicing elit. Consectetur earum dignissimos
+                                | nostrum illo accusantium ducimus recusandae facilis
+                                | assumenda hic vitae? Dolorum deserunt 
+                                | sit rerum quos rem iure fuga libero quo.
+                    .advantages__btn-wrapper.btn-wrapper
+                        a.buy-btn(href="#")
+                            | Сделать заказ
+                        a.telegramm-btn(href="tg://@antpzk")
+                            | Заказать в telegramm
+        section.product-preview
+            .product-preview__wrapper.container
+                h2.product-preview__title.mini-title
+                    | Наша продукция
+                ul.product-preview__list
+                    li.product-preview__list-item
+                        h3.product-preview__spectrum-title
+                            | Spectrum
+                            br
+                            | pharm
+                        p.product-preview__txt
+                            | Lorem ipsum dolor sit amet consectetur
+                            | adipisicing elit. Consectetur earum dignissimos
+                            | nostrum illo accusantium ducimus recusandae facilis
+                            | assumenda hic vitae? Dolorum deserunt 
+                            | sit rerum quos rem iure fuga libero quo.
+                    li.product-preview__list-item
+                        h3.product-preview__spectrum-title
+                            | Zhengzhou
+                            br
+                            | Pharmaceutical
+                        p.product-preview__txt
+                            | Lorem ipsum dolor sit amet consectetur
+                            | adipisicing elit. Consectetur earum dignissimos
+                            | nostrum illo accusantium ducimus recusandae facilis
+                            | assumenda hic vitae? Dolorum deserunt 
+                            | sit rerum quos rem iure fuga libero quo.
+        section.spectrum-catalog
+            .spectrum-catalog__wrapper.container
+                h2.spectrum-catalog__title
+                    | Каталог
+                    br
+                    span.spectrum-catalog__red-span.red-span
+                        | spectrum pharm
+                ul.spectrum-catalog__list.catalog-list
+                    +catalog_list(catalog_list_items_spectrum)
+        section.zhengzhou-catalog
+            .zhengzhou-catalog__wrapper
+                h2.zhengzhou-catalog__title
+                    | Каталог
+                    span.red-span
+                        |  Zhengzhou Pharmaceutical
+                ul.zhengzhou-catalog__list.catalog-list
+                    +catalog_list(catalog_list_items_zhengzhou)
+                a.zhengzhou-catalog__see-more(href="#")
+                    | Показать больше
+        section.delivery
+            .delivery__wrapper
+                h2.delivery__title
+                    | Доставка и поалта
+                    .delivery__content-wrapper
+                        .delivery__steps
+                            b.delivery__steps-slogan
+                                | Условия заказа
+                                br
+                                | 3 шага
+                            ul.delivery__steps-list
+                                li.delivery__steps-list-item
+                                    |1. Выберите товар
+                                li.delivery__steps-list-item
+                                    |2. заполните форму,напишите в ТЕЛЕГРАММ,позвоните
+                                li.delivery__steps-list-item
+                                    |3. Утрясите все вопросы с менеджером
+                            p.delivery__sale
+                                | При заказе стоимостью выше 
+                                span.red-span
+                                    |1500 грн.
+                                br
+                                | доставка осуществляется 
+                                span.red-span
+                                    |бесплатно
+                    .delivery__pay
+                        b.delivery__pay-slogan
+                            | Доступные способы
+                            br
+                            | оплаты
+                        p.delivery__pay-txt
+                            | Самым удобным способом для клиента является
+                            | наложеный платёж сервисом"Новая почта".
+                            | Если вас не устраивает этот вариант обсудите 
+                            | способ оплаты с менеджером.
+
+

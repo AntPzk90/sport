@@ -1,0 +1,34 @@
+mixin catalog_list(items)
+    each item in items
+        li.spectrum-catalog__list-item.catalog-list__item
+                        img.catalog-list__img(src=item.src, alt="catalog-list-image")
+                        h3.catalog-list__item-title
+                            | bondenole
+                        ul.catalog-list__sub-list
+                            li.catalog-list__sub-list-item
+                                span.catalog-list__item-position
+                                    | Производитель : 
+                                span.catalog-list__item-value
+                                    | Spectrum
+                            li.catalog-list__sub-list-item
+                                span.catalog-list__item-position
+                                    | Действ. вещество : 
+                                span.catalog-list__item-value
+                                    | Stanozolol
+                            li.catalog-list__sub-list-item
+                                span.catalog-list__item-position
+                                    | Дозировка : 
+                                span.catalog-list__item-value
+                                    | 100 mг
+                            li.catalog-list__sub-list-item
+                                span.catalog-list__item-position
+                                    | Тепмература хранения : 
+                                span.catalog-list__item-value
+                                    | (t° < 25-27°C)
+                        .catalog-list__user-wrapper
+                            a.buy-btn.buy-btn--catalog.catalog-list__btn(href="#")
+                                |Заказать
+                            a.telegramm-btn.telegramm-btn--catalog.catalog-list__btn(href="tg://")
+                                | telegramm  
+                            a.catalog-list__phone(href="#")
+                                

@@ -1,0 +1,22 @@
+.buy-btn{
+    display: inline-block;
+    padding: 25px 40px;
+    background-color: $red;
+    font-weight: bold;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin-right: 40px;
+    &:hover,
+    &:focus{
+        background-color: $white;
+        color: $red;
+    }
+    &:active{
+        background-color: #444;
+        color: $white;
+    }
+}
+.buy-btn--catalog{
+    position: relative;
+    padding: 25px 50px;
+}

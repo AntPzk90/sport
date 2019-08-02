@@ -1,0 +1,45 @@
+.telegramm-btn{
+    display: inline-block;
+    padding: 25px 20px 25px 60px;
+    background-color: $blue;
+    font-weight: bold;
+    vertical-align: middle;
+    text-transform: uppercase;
+    position: relative;
+    &:hover,
+    &:focus{
+        background-color: $white;
+        color: $blue;
+    }
+    &:active{
+        background-color:$blue;
+        color: $white;
+    }
+    &:after{
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: url("../imgs/icon-telegramm.png");
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+}
+.telegramm-btn--catalog{
+    padding: 25px 20px 25px 60px;
+    &:after{
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: url("../imgs/icon-telegramm.png");
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 2px;
+        left: 12px;
+    }
+}

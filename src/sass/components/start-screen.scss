@@ -1,0 +1,37 @@
+.start-screen{
+    min-height: 1000px;
+    background-image: url("../imgs/start-screen_bg.png");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.start-screen__paralax-wrapper{
+    background-image: url("../imgs/start_screen_fire1.png");
+    background-size: 212px 766px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 1000px;
+    box-sizing: border-box;
+    padding-top: 150px;
+}
+.start-screen__title-wrapper{
+    width: 560px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.start-screen__title{
+    color: #fff;
+    font-family: $roboto;
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: inherit;
+}
+.start-screen__title-red-element{
+    display: inline-block;
+    font-size: 36px;
+    line-height: 30px;
+}
+.start-screen__umper{
+    font-size: 60px;
+    line-height: 50px;
+}

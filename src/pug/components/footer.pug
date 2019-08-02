@@ -1,0 +1,25 @@
+footer.footer
+    .footer__wrapper.container
+        section.feedback
+            .feedback__wrapper
+                form.feedback__form(action="url",
+                                    method="POST")
+                    fieldset.feedback__fieldset
+                        input.feedback__input(type="text",
+                                              name="name")
+                        input.feedback__input(type="text",
+                                              name="email")
+                        input.feedback__input(type="text",
+                                              name="phone-number")
+                        textarea.feedback__input(name="text")
+                    button.feedback__btn
+                        | Отправить
+        section.footer__social
+            ul.footer__social-list
+                li.footer__social-list-item
+                    svg.footer__social-svg
+            span.footer__copyr
+                | steroid-house.com.ua
+        
+script(src="https://unpkg.com/scrollreveal")
+script(src="js/script.js")
