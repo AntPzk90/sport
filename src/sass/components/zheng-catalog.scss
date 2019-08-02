@@ -1,0 +1,25 @@
+.zhengzhou-catalog{
+    min-height: 1200px;
+    background: url("../imgs/product-preview_title-fire.png") no-repeat 50% 0px,
+                url("../imgs/spectrum-catalog_left-fire.png") no-repeat 0px 400px;
+    position: relative;
+}
+.zhengzhou-catalog__see-more{
+    width: 208px;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-family: $roboto;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: 1px solid $white;
+    margin: 0 auto;
+    margin-top: 50px;
+    &:hover,
+    &:focus{
+        border-color: $red;
+    }
+    &:active{
+        color: $red;
+    }
+}

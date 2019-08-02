@@ -113,57 +113,59 @@ block content
                             | sit rerum quos rem iure fuga libero quo.
         section.spectrum-catalog
             .spectrum-catalog__wrapper.container
-                h2.spectrum-catalog__title
+                h2.spectrum-catalog__title.catalog-title
                     | Каталог
                     br
-                    span.spectrum-catalog__red-span.red-span
+                    span.catalog-title__red-span.red-span
                         | spectrum pharm
                 ul.spectrum-catalog__list.catalog-list
                     +catalog_list(catalog_list_items_spectrum)
         section.zhengzhou-catalog
-            .zhengzhou-catalog__wrapper
-                h2.zhengzhou-catalog__title
+            .zhengzhou-catalog__wrapper.container
+                h2.zhengzhou-catalog__title.catalog-title
                     | Каталог
-                    span.red-span
+                    br
+                    span.catalog-title__red-span.red-span
                         |  Zhengzhou Pharmaceutical
                 ul.zhengzhou-catalog__list.catalog-list
                     +catalog_list(catalog_list_items_zhengzhou)
                 a.zhengzhou-catalog__see-more(href="#")
                     | Показать больше
         section.delivery
-            .delivery__wrapper
-                h2.delivery__title
-                    | Доставка и поалта
-                    .delivery__content-wrapper
-                        .delivery__steps
-                            b.delivery__steps-slogan
-                                | Условия заказа
+            .delivery__paralax-wrapper
+                .delivery__wrapper.container
+                    h2.delivery__title
+                        | Доставка и поалта
+                        .delivery__content-wrapper
+                            .delivery__steps
+                                b.delivery__steps-slogan
+                                    | Условия заказа
+                                    br
+                                    | 3 шага
+                                ul.delivery__steps-list
+                                    li.delivery__steps-list-item
+                                        |1. Выберите товар
+                                    li.delivery__steps-list-item
+                                        |2. заполните форму,напишите в ТЕЛЕГРАММ,позвоните
+                                    li.delivery__steps-list-item
+                                        |3. Утрясите все вопросы с менеджером
+                                p.delivery__sale
+                                    | При заказе стоимостью выше 
+                                    span.red-span
+                                        |1500 грн.
+                                    br
+                                    | доставка осуществляется 
+                                    span.red-span
+                                        |бесплатно
+                        .delivery__pay
+                            b.delivery__pay-slogan
+                                | Доступные способы
                                 br
-                                | 3 шага
-                            ul.delivery__steps-list
-                                li.delivery__steps-list-item
-                                    |1. Выберите товар
-                                li.delivery__steps-list-item
-                                    |2. заполните форму,напишите в ТЕЛЕГРАММ,позвоните
-                                li.delivery__steps-list-item
-                                    |3. Утрясите все вопросы с менеджером
-                            p.delivery__sale
-                                | При заказе стоимостью выше 
-                                span.red-span
-                                    |1500 грн.
-                                br
-                                | доставка осуществляется 
-                                span.red-span
-                                    |бесплатно
-                    .delivery__pay
-                        b.delivery__pay-slogan
-                            | Доступные способы
-                            br
-                            | оплаты
-                        p.delivery__pay-txt
-                            | Самым удобным способом для клиента является
-                            | наложеный платёж сервисом"Новая почта".
-                            | Если вас не устраивает этот вариант обсудите 
-                            | способ оплаты с менеджером.
+                                | оплаты
+                            p.delivery__pay-txt
+                                | Самым удобным способом для клиента является
+                                | наложеный платёж сервисом"Новая почта".
+                                | Если вас не устраивает этот вариант обсудите 
+                                | способ оплаты с менеджером.
 
 

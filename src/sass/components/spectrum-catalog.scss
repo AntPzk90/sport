@@ -1,8 +1,22 @@
 .spectrum-catalog{
     min-height: 1200px;
+    background: url("../imgs/product-preview_title-fire.png") no-repeat 50% 0px,
+                url("../imgs/spectrum-catalog_left-fire.png") no-repeat 0px 0px;
+    position: relative;
+    &::after{
+        content: "";
+        width: 160px;
+        height: 970px;
+        background: url("../imgs/about_us_big-fire.png") no-repeat 50%;
+        position: absolute;
+        right: 0;
+        bottom: -480px;
+    }
 }
 .spectrum-catalog__wrapper{
     min-height: 1200px;
+    box-sizing: border-box;
+    padding-top: 70px;
 }
 .spectrum-catalog__title{
     text-align: center;

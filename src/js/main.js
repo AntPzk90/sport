@@ -2,16 +2,42 @@ var bg = document.querySelector(".start-screen");
 var aboutBlock = document.querySelector(".about-us");
 var advantages = document.querySelector(".advantages");
 var catalogItem = document.querySelector(".catalog-list__item");
-console.log(catalogItem);
-catalogItem.addEventListener("mouseover",function(evt){
-     this.classList.add("catalog-list__item--active");
-});
-catalogItem.addEventListener("mouseout",function(evt){
-     this.classList.remove("catalog-list__item--active");
-});
-catalogItem.addEventListener("touchenter",function(evt){
-     this.classList.toggle("catalog-list__item--active");
-});
+var catalogItemsAll = document.querySelectorAll(".catalog-list__item");
+var byuBtn = document.querySelector(".buy-btn");
+
+byuBtn.addEventListener("click",scrollTo(this,catalogItem,200))
+var overHendler = function(item){
+     item.addEventListener("mouseover", function(evt){
+          evt.preventDefault();
+          var subCatalog = this.querySelector(".catalog-list__sub-list");
+          subCatalog.classList.add("catalog-list__item--active");
+     });
+     item.addEventListener("mouseout", function(evt){
+          evt.preventDefault();
+          var subCatalog = this.querySelector(".catalog-list__sub-list");
+          subCatalog.classList.remove("catalog-list__item--active");
+     });
+     item.addEventListener("touchend",function(evt){
+          evt.preventDefault();
+          var subCatalog = this.querySelector(".catalog-list__sub-list");
+          subCatalog.classList.toggle("catalog-list__item--active");
+     });
+}
+for (var i = 0; i < catalogItemsAll.length; i++) {
+     overHendler(catalogItemsAll[i]);
+}
+
+function scrollTo(element, to, duration) {
+     if (duration <= 0) return;
+     var difference = to - element.scrollTop;
+     var perTick = difference / duration * 10;
+ 
+     setTimeout(function() {
+         element.scrollTop = element.scrollTop + perTick;
+         if (element.scrollTop === to) return;
+         scrollTo(element, to, duration - 10);
+     }, 10);
+}
 // var mobileBtn = document.querySelector(".header__mobile");
 // var nav = document.querySelector(".header__main-nav");
 // var userWrap = document.querySelector(".header__user-wrapper");
@@ -33,13 +59,12 @@ catalogItem.addEventListener("touchenter",function(evt){
 window.addEventListener("scroll", function(evt){
     var scrolling = window.scrollY;
     bg.style.backgroundPosition = "50% " + scrolling/5 + "px";
-    //bg.style.opacity = 1 - (0 + "." + scrolling); 
-    //this.console.log(scrolling);
     var h = advantages.getBoundingClientRect();
     this.console.log(h.top)
-    if(h.top < 200){
-         this.console.log(scrolling);
-         advantages.style.backgroundPositionY = 0 + scrolling/7 + "px";
+    if(h.top < 1000){
+         scrolling = Math.abs(h.top);
+         this.console.log(scrolling)
+         advantages.style.backgroundPositionY = 100 + scrolling/4 + "px";
     }
 });
 var scrollPos = 0;

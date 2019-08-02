@@ -1,0 +1,25 @@
+.catalog-title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 70px;
+    &:after{
+        content: "";
+        display: block;
+        width: 130px;
+        height: 6px;
+        background: $white;
+        position: absolute;
+        bottom:-15px;
+        left:50%;
+        transform: translateX(-50%);
+    }
+}
+.catalog-title__red-span{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
