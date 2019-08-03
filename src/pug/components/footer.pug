@@ -4,22 +4,30 @@ footer.footer
             .feedback__wrapper
                 form.feedback__form(action="url",
                                     method="POST")
+                    p.feedback_slogan.mini-title
+                        | Напишите нам
                     fieldset.feedback__fieldset
-                        input.feedback__input(type="text",
-                                              name="name")
-                        input.feedback__input(type="text",
-                                              name="email")
-                        input.feedback__input(type="text",
-                                              name="phone-number")
-                        textarea.feedback__input(name="text")
+                        .fedback__input-wrapper
+                            input.feedback__input.feedback__input-name(type="text",
+                                                name="name",
+                                                placeholder="Ваше имя")
+                            input.feedback__input.feedback__input-tel(type="text",
+                                                name="phone-number",
+                                                placeholder="Ваше номер")
+                        input.feedback__input.feedback__input-email(type="text",
+                                              name="email",
+                                              placeholder="Ваше email")
+                        textarea.feedback__input.feedback__textarea(name="text",
+                                                                    placeholder="Ваше сообщение")
                     button.feedback__btn
                         | Отправить
-        section.footer__social
-            ul.footer__social-list
-                li.footer__social-list-item
-                    svg.footer__social-svg
-            span.footer__copyr
-                | steroid-house.com.ua
+    section.footer__social
+        ul.footer__social-list
+            li.footer__social-list-item
+                a.telegramm-btn(href="tg://")
+                            | Заказать в telegramm
+        span.footer__copyr
+            | steroid-house.com.ua
         
 script(src="https://unpkg.com/scrollreveal")
 script(src="js/script.js")

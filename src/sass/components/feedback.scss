@@ -1,0 +1,84 @@
+.feedback__form{
+    width: 980px;
+    margin: 0 auto;
+    background-color: #14161a;
+    box-sizing: border-box;
+    padding: 75px 100px;
+    outline: $red;
+    margin-bottom: 70px;
+    -webkit-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+    -moz-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+    box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+}
+.feedback_slogan{
+    text-align: center;
+    &:after{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.feedback__fieldset{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+}
+.feedback__input{
+    background-color: #000001;
+    border:none;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: $white;
+    line-height: 30px;
+    box-sizing: border-box;
+    padding: 15px 25px;
+    &:hover,
+    &:focus{
+       border-bottom: 1px solid $red; 
+    }
+}
+.fedback__input-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.feedback__input-name,
+.feedback__input-tel{
+    width: 48%;
+}
+.feedback__input-email{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.feedback__textarea{
+    resize: none;
+    height: 180px;
+    width: 100%;
+}
+.feedback__btn{
+    outline: none;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    border: none;
+    padding: 15px 0;
+    -webkit-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+    -moz-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+    box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+    &:hover,
+    &:focus{
+        opacity: 0.6;
+    }
+    &:active{
+        color: $red;
+    }
+
+}

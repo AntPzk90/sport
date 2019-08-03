@@ -3,9 +3,65 @@
     background: url("../imgs/delivery_bg1.png") no-repeat 0 0;
     background-size: 90% 100%;
     background-color: #0f1116;
+
 }
 .delivery__paralax-wrapper{
     min-height: 680px;
     background: url("../imgs/delivery_bg2.png") no-repeat 85% 0;
     background-size: 60% 100%;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.delivery__title{
+    text-align: center;
+    &:after{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.delivery__content-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.delivery__steps{
+    width: 580px;
+}
+.delivery__steps-slogan{
+    display: block;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+.delivery__steps-list{
+    @include list-reset;
+}
+.delivery__steps-list-item{
+    font-size: 24px;
+    line-height: 48px;
+}
+.delivery__sale{
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.delivery__pay{
+    width: 480px;
+}
+.delivery__pay-slogan{
+    display: block;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+.delivery__pay-txt{
+    font-size: 24px;
+    line-height: 48px;
+}
+.delivery__btn-wrapper{
+    text-align: center;
+    margin-top: 30px;
 }

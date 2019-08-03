@@ -1,6 +1,13 @@
 .header{
-    // position: fixed;
-    // width: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+.header--fixed{
+    background-color: #14161a;
+    -webkit-box-shadow: 0px 14px 17px -9px rgba(154,23,10,1);
+    -moz-box-shadow: 0px 14px 17px -9px rgba(154,23,10,1);
+    box-shadow: 0px 14px 17px -9px rgba(154,23,10,1);
 }
 .header__wrapper{
     display: flex;
@@ -42,12 +49,24 @@
 }
 .header__list-item{
     padding: 0 15px;
+    border-bottom:1px solid transparent;
+    &:hover{
+        border-bottom:1px solid $red;
+    }
 }
 .header__list-link{
     font-size: 18px;
     line-height: 34px;
     font-family: $roboto;
     font-weight: 400;
+    &:hover,
+    &:focus{
+        color: $red;
+    }
+    &:active{
+        color: $red;
+        opacity: 0.6;
+    }
 }
 .header__tel-href{
     font-size: 18px;
