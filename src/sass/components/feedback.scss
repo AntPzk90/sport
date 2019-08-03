@@ -9,6 +9,10 @@
     -webkit-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
     -moz-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
     box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+    @media screen and (max-width:$tablet){
+        width: 440px;
+        padding: 30px;
+    }
 }
 .feedback_slogan{
     text-align: center;
@@ -43,15 +47,24 @@
 .fedback__input-wrapper{
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width:$tablet){
+        flex-direction: column;
+    }
 }
 .feedback__input-name,
 .feedback__input-tel{
     width: 48%;
+    @media screen and (max-width:$tablet){
+        width: 100%;
+    }
 }
 .feedback__input-email{
     width: 70%;
     margin: 0 auto;
     margin-bottom: 30px;
+    @media screen and (max-width:$tablet){
+        width: 100%;
+    }
 }
 .feedback__textarea{
     resize: none;

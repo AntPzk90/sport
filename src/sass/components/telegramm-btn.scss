@@ -27,6 +27,15 @@
         top: 15px;
         left: 15px;
     }
+    @media screen and (max-width:$tablet){
+        width: 208px;
+        font-size: 15px;
+        padding: 25px 20px 25px 50px;
+        text-align: center;
+        &:after{
+            left: 5px;
+        }
+    }
 }
 .telegramm-btn--catalog{
     padding: 25px 20px 25px 60px;
@@ -41,5 +50,10 @@
         position: absolute;
         top: 2px;
         left: 12px;
+    }
+    @media screen and (max-width:$tablet){
+        width: 200px;
+        text-align: center;
+        padding: 25px 20px 25px 20px;
     }
 }

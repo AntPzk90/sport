@@ -15,12 +15,19 @@
         right: 0;
         top: 0;
     }
+    @media screen and (max-width:$tablet){
+       background:  url("../imgs/product-preview_bg2.png") no-repeat 100% 120px,
+                    url("../imgs/product-preview_title-fire.png") no-repeat 50% 0px;
+    }
 }
 .product-preview__wrapper{
     min-height: 820px;
     box-sizing: border-box;
     padding-top: 115px;
     padding-bottom: 30px;
+    @media screen and (max-width:$tablet){
+        padding-top: 50px;
+    }
 }
 .product-preview__title{
     @include center-title;
@@ -46,12 +53,21 @@
         top: 0;
         transform: rotate(15deg);
         opacity: 0.7;
+        @media screen and (max-width:$tablet){
+            display: none;
+        }
+    }
+    @media screen and (max-width:$tablet){
+        flex-direction: column;
     }
 }
 .product-preview__list-item{
     box-sizing: border-box;
     width: 48%;
     padding: 0 66px;
+    @media screen and (max-width:$tablet){
+        width: 100%;
+    }
 }
 .product-preview__spectrum-title{
     @include name-product;

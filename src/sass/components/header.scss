@@ -2,9 +2,11 @@
     position: fixed;
     width: 100%;
     z-index: 3;
+    @media screen and (max-width:$tablet){
+    }
 }
 .header--fixed{
-    background-color: #14161a;
+    background-color: $black;
     -webkit-box-shadow: 0px 14px 17px -9px rgba(154,23,10,1);
     -moz-box-shadow: 0px 14px 17px -9px rgba(154,23,10,1);
     box-shadow: 0px 14px 17px -9px rgba(154,23,10,1);
@@ -14,6 +16,9 @@
     align-items: center;
     justify-content: space-between;
     min-height: 80px;
+    @media screen and (max-width:$tablet){
+        min-height: 60px;
+    }
 }
 .header__logo{
     position: relative;
@@ -31,6 +36,13 @@
         background-position: 50%;
         background-repeat: no-repeat;
         z-index: 0;
+        @media screen and (max-width:$tablet){
+            z-index: 2;
+            width: 100px;
+        }
+    }
+    @media screen and (max-width:$tablet){
+        height: 60px;
     }
 }
 .header__logo-span{
@@ -41,17 +53,41 @@
     color:#fff;
     font-weight: bold;
     margin-top: 10px;
+    @media screen and (max-width:$tablet){
+        z-index: 3;
+        width: 100px;
+    }
+}
+.header__navigation{
+    @media screen and (max-width:$tablet){
+        position: absolute;
+        top:60px;
+        left:50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
 }
 .header__navigation-list{
     @include list-reset;
     display: flex;
     align-items: center;
+    @media screen and (max-width:$tablet){
+        flex-direction: column;
+        display: none;
+    }
 }
 .header__list-item{
     padding: 0 15px;
     border-bottom:1px solid transparent;
     &:hover{
         border-bottom:1px solid $red;
+    }
+    @media screen and (max-width:$tablet){
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+        background-color: $black;
+        border-bottom: 1px solid $white;
     }
 }
 .header__list-link{
@@ -93,5 +129,30 @@
         top: 0;
         left: -40px;
         animation: pulse .5s ease infinite;
+    }
+    @media screen and (max-width: $tablet) {
+        
+    }
+}
+.header__mobile-btn{
+    display: none;
+    @media screen and (max-width:$tablet){
+        border:none;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color:transparent;
+        background-image: url("../imgs/icon-menu.png");
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: contain;
+    }
+    &:active{
+        opacity: 0.6;
+    }
+}
+.header__mobile-btn--close{
+    @media screen and (max-width:$tablet){
+        background-image: url("../imgs/icon-close.png");
     }
 }

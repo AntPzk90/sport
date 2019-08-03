@@ -4,6 +4,9 @@
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
+    @media screen and (max-width:$tablet){
+        min-height: 700px;
+    }
 }
 .start-screen__paralax-wrapper{
     background-image: url("../imgs/start_screen_fire1.png");
@@ -13,11 +16,18 @@
     min-height: 1000px;
     box-sizing: border-box;
     padding-top: 150px;
+    @media screen and (max-width:$tablet){
+        background-size: 106px 383px;
+        min-height: 700px;
+    }
 }
 .start-screen__title-wrapper{
     width: 560px;
     font-weight: 900;
     text-transform: uppercase;
+    @media screen and (max-width:$tablet){
+        width: 440px;
+    }
 }
 .start-screen__title{
     color: #fff;
@@ -25,6 +35,10 @@
     font-size: 72px;
     line-height: 72px;
     font-weight: inherit;
+    @media screen and (max-width:$tablet){
+        font-size: 55px;
+        line-height: 55px;
+    }
 }
 .start-screen__title-red-element{
     display: inline-block;
@@ -34,4 +48,15 @@
 .start-screen__umper{
     font-size: 60px;
     line-height: 50px;
+    @media screen and (max-width:$tablet){
+        font-size: 55px;
+        line-height: 55px;
+    }
+}
+.start-screen__btn-wrapper{
+    @media screen and (max-width:$tablet){
+        height: 180px;
+        flex-direction: column;
+        align-items: flex-start
+    }
 }

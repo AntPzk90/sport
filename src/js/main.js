@@ -4,6 +4,7 @@ var aboutBlock = document.querySelector(".about-us");
 var advantages = document.querySelector(".advantages");
 var catalogItem = document.querySelector(".catalog-list__item");
 var catalogItemsAll = document.querySelectorAll(".catalog-list__item");
+var mobileBtn = document.querySelector(".header__mobile-btn");
 var byuBtn = document.querySelector(".buy-btn");
 
 var overHendler = function(item){
@@ -30,23 +31,20 @@ for (var i = 0; i < catalogItemsAll.length; i++) {
      overHendler(catalogItemsAll[i]);
 }
 
-// var mobileBtn = document.querySelector(".header__mobile");
-// var nav = document.querySelector(".header__main-nav");
-// var userWrap = document.querySelector(".header__user-wrapper");
-// mobileBtn.addEventListener("click",function(evt){
-//     evt.preventDefault();
-//     this.classList.toggle("header__mobile--open")
-//     if(this.classList.contains("header__mobile--open")){
-//         this.classList.remove("header__mobile--close");
-//         nav.style.display = "none";
-//         userWrap.style.display = "none";
-//     }else{
-//         this.classList.add("header__mobile--close");
-//         nav.removeAttribute("style");
-//         userWrap.removeAttribute("style");
-//     }
-// });
-// console.log(mobileBtn.classList.contains("header__mobile--close"));
+
+var nav = document.querySelector(".header__navigation-list");
+
+mobileBtn.addEventListener("click",function(evt){
+    evt.preventDefault();
+    this.classList.toggle("header__mobile-btn--close")
+    if(this.classList.contains("header__mobile-btn--close")){
+        nav.style.display = "flex";
+    }else{
+        this.classList.add("header__mobile--close");
+        nav.removeAttribute("style");
+    }
+});
+
 
 window.addEventListener("scroll", function(evt){
      var scrolling = window.scrollY;

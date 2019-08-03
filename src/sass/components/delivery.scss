@@ -3,6 +3,9 @@
     background: url("../imgs/delivery_bg1.png") no-repeat 0 0;
     background-size: 90% 100%;
     background-color: #0f1116;
+    @media screen and (max-width:$tablet){
+        background-image: none;
+    }
 
 }
 .delivery__paralax-wrapper{
@@ -12,6 +15,9 @@
     box-sizing: border-box;
     padding-top: 50px;
     padding-bottom: 50px;
+    @media screen and (max-width:$tablet){
+        background-size: cover;
+    }
 }
 .delivery__title{
     text-align: center;
@@ -23,9 +29,18 @@
 .delivery__content-wrapper{
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width:$tablet){
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 }
 .delivery__steps{
     width: 580px;
+    @media screen and (max-width:$tablet){
+        width: 440px;
+        text-align: center;
+    }
 }
 .delivery__steps-slogan{
     display: block;
@@ -49,6 +64,10 @@
 }
 .delivery__pay{
     width: 480px;
+    @media screen and (max-width:$tablet){
+        width: 440px;
+        text-align: center;
+    }
 }
 .delivery__pay-slogan{
     display: block;
