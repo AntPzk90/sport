@@ -15,9 +15,19 @@
 }
 .advantages__wrapper{
     background:url("../imgs/advantages_smoke-big.png") no-repeat 350px 0;
-    @media screen and (max-width:$tablet){     
+    @media screen and (max-width:$tablet){
+        position: relative;
         background:url("../imgs/advantages_smoke-big.png") no-repeat 350px 0,
-                    url("../imgs/product-preview_bg1.png") no-repeat 100% 100%;
+                    url("../imgs/product-preview_bg1.png") no-repeat 0 100%;
+        &::after{
+            content: "";
+            width: 160px;
+            height: 970px;
+            background: url("../imgs/about_us_big-fire.png") no-repeat 50%;
+            position: absolute;
+            right: 0;
+            bottom: 100px;
+        }
     }
 }
 .advantages__title{
