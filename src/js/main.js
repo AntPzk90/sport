@@ -81,7 +81,10 @@ mobileBtn.addEventListener("click",function(evt){
           navList.classList.add("header__navigation-list--off");
     }
 });
-
+var scrolling = window.scrollY;
+if(scrolling > 0){
+     header.classList.add("header--fixed");
+}
 window.addEventListener("scroll", function(evt){
      var scrolling = window.scrollY;
      if(scrolling > 150){

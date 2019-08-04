@@ -1,0 +1,29 @@
+.telegramm-fixed-btn{
+    display: none;
+    @media screen and (max-width:$tablet){
+        display: block;
+        position: fixed;
+        bottom: 90px;
+        right: 10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        z-index: 5;
+        -webkit-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+        -moz-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+        box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+        animation: tg-shadow 1s ease-in infinite;
+    }
+}
+.telegramm-fixed-btn__link{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $blue;
+    background-image: url("../imgs/icon-telegramm.png");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 5;
+}

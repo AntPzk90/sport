@@ -34,6 +34,18 @@
         box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
     }
 }
+@keyframes tg-shadow{
+    0%{
+        -webkit-box-shadow: 0px 0px 26px 9px $blue;
+        -moz-box-shadow: 0px 0px 26px 9px $blue;
+        box-shadow: 0px 0px 26px 9px $blue;
+    }
+    100%{
+        -webkit-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+        -moz-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+        box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+    }
+}
 @keyframes menu-on{
     0%{
         left: -90%;

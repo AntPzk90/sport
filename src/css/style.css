@@ -468,6 +468,22 @@ a {
     -webkit-box-shadow: 0px 0px 26px 9px #0d0e11;
     box-shadow: 0px 0px 26px 9px #0d0e11; } }
 
+@-webkit-keyframes tg-shadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 26px 9px #073666;
+    box-shadow: 0px 0px 26px 9px #073666; }
+  100% {
+    -webkit-box-shadow: 0px 0px 26px 9px #0d0e11;
+    box-shadow: 0px 0px 26px 9px #0d0e11; } }
+
+@keyframes tg-shadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 26px 9px #073666;
+    box-shadow: 0px 0px 26px 9px #073666; }
+  100% {
+    -webkit-box-shadow: 0px 0px 26px 9px #0d0e11;
+    box-shadow: 0px 0px 26px 9px #0d0e11; } }
+
 @-webkit-keyframes menu-on {
   0% {
     left: -90%; }
@@ -1777,6 +1793,35 @@ footer {
   background-color: #14161a;
   background-image: url("../imgs/icon-call.png");
   background-size: 30px 30px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  z-index: 5; }
+
+.telegramm-fixed-btn {
+  display: none; }
+  @media screen and (max-width: 1050px) {
+    .telegramm-fixed-btn {
+      display: block;
+      position: fixed;
+      bottom: 90px;
+      right: 10px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      z-index: 5;
+      -webkit-box-shadow: 0px 0px 26px 9px #0d0e11;
+      box-shadow: 0px 0px 26px 9px #0d0e11;
+      -webkit-animation: tg-shadow 1s ease-in infinite;
+      animation: tg-shadow 1s ease-in infinite; } }
+
+.telegramm-fixed-btn__link {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #073666;
+  background-image: url("../imgs/icon-telegramm.png");
+  background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
   border-radius: 50%;
