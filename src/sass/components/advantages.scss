@@ -8,6 +8,9 @@
         padding-top: 30px;
         background: url("../imgs/advantages_bg.png") no-repeat 100% 100px;
     }
+    @media screen and (max-width:$mobile){
+        padding-top: 50px;
+    }
 }
 .advantages__paralax-wrapper{
     background:url("../imgs/advantages_big-fire.png") no-repeat 0 0,
@@ -59,6 +62,9 @@
     }
     @media screen and (max-width:$tablet){
         width: 50%;
+    }
+    @media screen and (max-width:$mobile){
+        width: 100%;
     }
 }
 .advantages__list-title{

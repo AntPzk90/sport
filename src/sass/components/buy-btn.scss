@@ -25,6 +25,7 @@
 }
 .buy-btn--catalog{
     position: relative;
+    z-index: 7;
     padding: 25px 50px;
     @media screen and (max-width:$tablet){
         width: 140px;

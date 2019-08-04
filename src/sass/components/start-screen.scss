@@ -7,6 +7,9 @@
     @media screen and (max-width:$tablet){
         min-height: 700px;
     }
+    @media screen and (max-width:$mobile){
+        min-height: 600px;
+    }
 }
 .start-screen__paralax-wrapper{
     background-image: url("../imgs/start_screen_fire1.png");
@@ -28,6 +31,9 @@
     @media screen and (max-width:$tablet){
         width: 440px;
     }
+    @media screen and (max-width:$mobile){
+        width: 100%;
+    }
 }
 .start-screen__title{
     color: #fff;
@@ -39,11 +45,17 @@
         font-size: 55px;
         line-height: 55px;
     }
+    @media screen and (max-width:$mobile){
+        font-size: 40px;
+    }
 }
 .start-screen__title-red-element{
     display: inline-block;
     font-size: 36px;
     line-height: 30px;
+    @media screen and (max-width:$mobile){
+        font-size: 28px;
+    }
 }
 .start-screen__umper{
     font-size: 60px;
@@ -51,6 +63,9 @@
     @media screen and (max-width:$tablet){
         font-size: 55px;
         line-height: 55px;
+    }
+    @media screen and (max-width:$mobile){
+        font-size: 28px;
     }
 }
 .start-screen__btn-wrapper{

@@ -10,6 +10,9 @@ footer{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    @media screen and (max-width:$mobile){
+        min-height: 200px;
+    }
 }
 .footer__social-list{
     @include list-reset;

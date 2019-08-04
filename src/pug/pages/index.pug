@@ -119,7 +119,7 @@ block content
                         |  Zhengzhou Pharmaceutical
                 ul.zhengzhou-catalog__list.catalog-list
                     +catalog_list(catalog_list_items_zhengzhou)
-                a.zhengzhou-catalog__see-more(href="#")
+                //a.zhengzhou-catalog__see-more(href="#")
                     | Показать больше
         section.delivery
             .delivery__paralax-wrapper
@@ -162,5 +162,21 @@ block content
                             | Купить сейчас
                         a.telegramm-btn(href="tg://")
                             | Заказать в telegramm
+        section.popup-feedback
+            button.popup-feedback__btn-close
+            form.feedback__form.popup__form(action="url",
+                                    method="POST")
+                    p.feedback_slogan.mini-title.popup__form-title
+                        | Напишите нам
+                    fieldset.feedback__fieldset
+                        .fedback__input-wrapper
+                            input.feedback__input.feedback__input-name(type="text",
+                                                name="name",
+                                                placeholder="Ваше имя")
+                            input.feedback__input.feedback__input-tel(type="text",
+                                                name="phone-number",
+                                                placeholder="Ваше номер")
+                    button.feedback__btn
+                        | Отправить
 
 

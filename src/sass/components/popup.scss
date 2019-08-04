@@ -1,0 +1,35 @@
+.popup__form{
+    width: 90%;
+    max-width: 440px;
+    margin: 0 auto;
+    @media screen and (max-width:$mobile){
+        width: 300px;
+        height: 364px;
+    }
+}
+.popup__form-title{
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+.popup-feedback--on{
+    position: fixed;
+    top:50%;
+    margin-top: -162px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+.popup-feedback__btn-close{
+    border:none;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color:$red;
+    background-image: url("../imgs/icon-close.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

@@ -7,6 +7,9 @@
         background-size: cover;
         background-position: 50%;
     }
+    @media screen and (max-width:$mobile){
+        background: url("../imgs/about_us_big-fire.png") no-repeat 100% 50%;
+    }
 }
 .about-us__paralax-wrapper{
     background:url("../imgs/about_us_title-fire.png") no-repeat 60% 0;
@@ -30,6 +33,10 @@
     @media screen and (max-width:$tablet){
         background-size: 0;
     }
+    @media screen and (max-width:$mobile){
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 .about-us__wrapper{
     display: flex;
@@ -39,7 +46,7 @@
     padding-top: 70px;
 }
 .about-us__content{
-    width: 50%;
+    width: 55%;
     margin-top: -70px;
     @media screen and (max-width:$tablet){
         width: 100%;
@@ -63,7 +70,11 @@
     letter-spacing: 3px;
     @media screen and (max-width:$tablet){
         font-size: 24px;
-        font-weight: 300;
+        font-weight: 200;
+    }
+    @media screen and (max-width:$mobile){
+        font-size: 18px;
+        font-weight: 200;
     }
 }
 .about-us__download-link{
@@ -104,6 +115,10 @@
     }
 }
 .about-us__btn-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     @media screen and (max-width:$tablet){
         align-items: center;
     }

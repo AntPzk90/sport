@@ -31,6 +31,9 @@
 }
 .product-preview__title{
     @include center-title;
+    @media screen and (max-width:$mobile){
+        margin-bottom: 30px;
+    }
 }
 .product-preview__list{
     @include list-reset;
@@ -67,6 +70,9 @@
     padding: 0 66px;
     @media screen and (max-width:$tablet){
         width: 100%;
+    }
+    @media screen and (max-width:$mobile){
+        padding: 0;
     }
 }
 .product-preview__spectrum-title{

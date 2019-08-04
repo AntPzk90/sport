@@ -4,9 +4,28 @@ var aboutBlock = document.querySelector(".about-us");
 var advantages = document.querySelector(".advantages");
 var catalogItem = document.querySelector(".catalog-list__item");
 var catalogItemsAll = document.querySelectorAll(".catalog-list__item");
+var catalogItemsImgsAll = document.querySelectorAll(".catalog-list__img");
 var mobileBtn = document.querySelector(".header__mobile-btn");
 var byuBtn = document.querySelector(".buy-btn");
-
+var nav = document.querySelector(".header__navigation-list");
+var navList = document.querySelector(".header__navigation");
+var buyBtns = document.querySelectorAll(".buy-btn");
+var popup = document.querySelector(".popup-feedback");
+console.log(catalogItemsImgsAll)
+var buyBtnsClickHendler = function(item){
+     item.addEventListener("click",function(evt){
+          evt.preventDefault();
+          popup.classList.add("popup-feedback--on");
+          var popupBtnClose = popup.querySelector(".popup-feedback__btn-close");
+          popupBtnClose.addEventListener("click",function(evt){
+               evt.preventDefault();
+               popup.classList.remove("popup-feedback--on");
+          });
+     })
+}
+for(var j = 0; j < buyBtns.length; j++){
+     buyBtnsClickHendler(buyBtns[j]);
+}
 var overHendler = function(item){
      item.addEventListener("mouseover", function(evt){
           evt.preventDefault();
@@ -31,20 +50,22 @@ for (var i = 0; i < catalogItemsAll.length; i++) {
      overHendler(catalogItemsAll[i]);
 }
 
-
-var nav = document.querySelector(".header__navigation-list");
-
 mobileBtn.addEventListener("click",function(evt){
     evt.preventDefault();
     this.classList.toggle("header__mobile-btn--close")
     if(this.classList.contains("header__mobile-btn--close")){
-        nav.style.display = "flex";
+          header.classList.add("header--fixed-tab");
+          nav.style.display = "flex";
+          navList.classList.remove("header__navigation-list--off");
+          navList.classList.add("header__navigation-list--on");
     }else{
-        this.classList.add("header__mobile--close");
-        nav.removeAttribute("style");
+          this.classList.add("header__mobile--close");
+          header.classList.remove("header--fixed-tab");
+          nav.removeAttribute("style");
+          navList.classList.remove("header__navigation-list--on");
+          navList.classList.add("header__navigation-list--off");
     }
 });
-
 
 window.addEventListener("scroll", function(evt){
      var scrolling = window.scrollY;

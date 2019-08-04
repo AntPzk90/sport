@@ -11,6 +11,9 @@
     -moz-box-shadow: 0px 14px 17px -9px rgba(154,23,10,1);
     box-shadow: 0px 14px 17px -9px rgba(154,23,10,1);
 }
+.header--fixed-tab{
+    background-color: $black;
+}
 .header__wrapper{
     display: flex;
     align-items: center;
@@ -39,9 +42,16 @@
         @media screen and (max-width:$tablet){
             z-index: 2;
             width: 100px;
+            height: 80px;
+        }
+        @media screen and (max-width:$mobile){
+            width: 80px;
         }
     }
     @media screen and (max-width:$tablet){
+        height: 60px;
+    }
+    @media screen and (max-width:$mobile){
         height: 60px;
     }
 }
@@ -57,14 +67,22 @@
         z-index: 3;
         width: 100px;
     }
+    @media screen and (max-width:$mobile){
+        width: 80px;
+    }
 }
 .header__navigation{
     @media screen and (max-width:$tablet){
         position: absolute;
         top:60px;
-        left:50%;
-        transform: translateX(-50%);
-        width: 100%;
+        left:-90%;
+        width: 75%;
+    }
+    @media screen and (max-width:$mobile){
+        border-right: 1px solid $red;
+        -webkit-box-shadow: 10px 10px 10px 0px rgba(154,23,10,1);
+        -moz-box-shadow: 10px 10px 10px 0px rgba(154,23,10,1);
+        box-shadow: 10px 10px 10px 0px rgba(154,23,10,1);
     }
 }
 .header__navigation-list{
@@ -73,8 +91,16 @@
     align-items: center;
     @media screen and (max-width:$tablet){
         flex-direction: column;
-        display: none;
+        display: flex;
     }
+}
+.header__navigation-list--on{
+    animation: menu-on .3s ease;
+    left: 0;
+}
+.header__navigation-list--off{
+    animation: menu-off .3s ease;
+    left: -90%;
 }
 .header__list-item{
     padding: 0 15px;
@@ -87,7 +113,10 @@
         padding: 20px 0;
         width: 100%;
         background-color: $black;
-        border-bottom: 1px solid $white;
+        border-bottom: 1px solid $red;
+        &:active{
+            border-bottom: 1px solid $white;
+        }
     }
 }
 .header__list-link{
@@ -129,9 +158,18 @@
         top: 0;
         left: -40px;
         animation: pulse .5s ease infinite;
+        @media screen and (max-width:$tablet){
+            width: 20px;
+            height: 20px;
+            top: 5px;
+            left: -30px;
+        }
     }
     @media screen and (max-width: $tablet) {
         
+    }
+    @media screen and (max-width:$tablet){
+        font-size: 16px;
     }
 }
 .header__mobile-btn{

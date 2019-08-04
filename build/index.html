@@ -17,7 +17,7 @@
             <li class="header__list-item"><a class="header__list-link" href="#">Zhengzhou Pharmaceutical</a></li>
             <li class="header__list-item"><a class="header__list-link" href="#">Доставка</a></li>
           </ul>
-        </nav><a class="header__tel-href" href="tel:">+38 097 765 43 21</a>
+        </nav><a class="header__tel-href" href="tel:">097 765 43 21</a>
         <button class="header__mobile-btn"></button>
       </div>
     </header>
@@ -355,7 +355,9 @@
           </ul>
           <div class="catalog-list__user-wrapper"><a class="buy-btn buy-btn--catalog catalog-list__btn" href="#">Заказать</a><a class="telegramm-btn telegramm-btn--catalog catalog-list__btn" href="tg://">telegramm  </a><a class="catalog-list__phone" href="#"></a></div>
         </li>
-      </ul><a class="zhengzhou-catalog__see-more" href="#">Показать больше</a>
+      </ul>
+      <!--a.zhengzhou-catalog__see-more(href="#")| Показать больше
+      -->
     </div>
   </section>
   <section class="delivery">
@@ -383,6 +385,19 @@
         <div class="delivery__btn-wrapper btn-wrapper"><a class="buy-btn" href="#">Купить сейчас</a><a class="telegramm-btn" href="tg://">Заказать в telegramm</a></div>
       </div>
     </div>
+  </section>
+  <section class="popup-feedback">
+    <button class="popup-feedback__btn-close"></button>
+    <form class="feedback__form popup__form" action="url" method="POST">
+      <p class="feedback_slogan mini-title popup__form-title">Напишите нам</p>
+      <fieldset class="feedback__fieldset">
+        <div class="fedback__input-wrapper">
+          <input class="feedback__input feedback__input-name" type="text" name="name" placeholder="Ваше имя"/>
+          <input class="feedback__input feedback__input-tel" type="text" name="phone-number" placeholder="Ваше номер"/>
+        </div>
+      </fieldset>
+      <button class="feedback__btn">Отправить</button>
+    </form>
   </section>
 </main>
 <footer class="footer">
