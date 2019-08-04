@@ -62,12 +62,11 @@
     }
 }
 .about-us__txt{
-    font-family: $helv;
+    font-family: $roboto;
     font-size: 18px;
     line-height: 24px;
     font-weight: 200;
     margin-bottom: 50px;
-    letter-spacing: 3px;
     @media screen and (max-width:$tablet){
         font-size: 24px;
         font-weight: 200;

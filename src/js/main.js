@@ -11,26 +11,31 @@ var nav = document.querySelector(".header__navigation-list");
 var navList = document.querySelector(".header__navigation");
 var buyBtns = document.querySelectorAll(".buy-btn");
 var popup = document.querySelector(".popup-feedback");
+var popupForm = document.querySelector(".popup__form");
 var body = document.querySelector("body");
 console.log(catalogItemsImgsAll)
+//нажатие на кнопку появления попапа
 var buyBtnsClickHendler = function(item){
      item.addEventListener("click",function(evt){
           evt.preventDefault();
-          popup.classList.remove("popup-feedback--off");
-          popup.classList.add("popup-feedback--on");
+          var popupOverlay = document.createElement("div");
+          popupOverlay.classList = "popup-feedback popup-feedback--on";
+          document.body.appendChild(popupOverlay);
           body.style.overflow = "hidden";
-          var popupBtnClose = popup.querySelector(".popup-feedback__btn-close");
+          popupForm.classList.add("feedback__form--on");
+          var popupBtnClose = popupForm.querySelector(".popup-feedback__btn-close");
           popupBtnClose.addEventListener("click",function(evt){
                evt.preventDefault();
-               popup.classList.remove("popup-feedback--on");
-               popup.classList.add("popup-feedback--off");
+               popupOverlay.remove();
+               popupForm.classList.remove("feedback__form--on");
                body.removeAttribute("style");
           });
-          popup.addEventListener("click", function(evt){
+          popupOverlay.addEventListener("click", function(evt){
                evt.preventDefault();
-               popup.classList.remove("popup-feedback--on");
-               popup.classList.add("popup-feedback--off");
+               console.log(evt)
+               popupOverlay.remove();
                body.removeAttribute("style");
+               popupForm.classList.remove("feedback__form--on");
           });
      });
 }
@@ -50,6 +55,11 @@ var overHendler = function(item){
           var subCatalog = this.querySelector(".catalog-list__sub-list");
           subCatalog.classList.remove("catalog-list__item--active");
      });
+}
+for (var k = 0; k < catalogItemsAll.length; k++) {
+     overHendler(catalogItemsAll[k]);
+}
+var touchHendler = function(item){
      item.addEventListener("touchend",function(evt){
           evt.preventDefault();
           this.parentElement.classList.toggle("catalog-list__item--shadow");
@@ -58,13 +68,13 @@ var overHendler = function(item){
           subCatalog.addEventListener("touchend", function(evt){
                evt.preventDefault();
                subCatalog.classList.remove("catalog-list__item--active");
+               this.parentElement.classList.toggle("catalog-list__item--shadow");
           });
      });
 }
 for (var i = 0; i < catalogItemsImgsAll.length; i++) {
-     overHendler(catalogItemsImgsAll[i]);
+     touchHendler(catalogItemsImgsAll[i]);
 }
-
 mobileBtn.addEventListener("click",function(evt){
     evt.preventDefault();
     this.classList.toggle("header__mobile-btn--close")

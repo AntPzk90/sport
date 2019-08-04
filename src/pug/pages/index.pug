@@ -162,22 +162,22 @@ block content
                             | Купить сейчас
                         a.telegramm-btn(href="tg://")
                             | Заказать в telegramm
-        section.popup-feedback.popup-feedback--off
-            form.feedback__form.popup__form(action="url",
-                                    method="POST")
-                    span.popup-feedback__btn-close(tabindex="0")
-                    p.feedback_slogan.mini-title.popup__form-title
-                        | Напишите нам
-                    fieldset.feedback__fieldset
-                        .fedback__input-wrapper.popup__input-wrapper
-                            input.feedback__input.popup-feedback__input.feedback__input-name(type="text",
-                                                name="name",
-                                                placeholder="Ваше имя")
-                            input.feedback__input.popup-feedback__input.feedback__input-tel(type="text",
-                                                name="phone-number",
-                                                placeholder="Ваше номер")
-                    button(type="submit").feedback__btn
-                        | Отправить
+        
+        form.feedback__form.popup__form(action="url",
+                                method="POST")
+                span.popup-feedback__btn-close(tabindex="0")
+                p.feedback_slogan.mini-title.popup__form-title
+                    | Напишите нам
+                fieldset.feedback__fieldset
+                    .fedback__input-wrapper.popup__input-wrapper
+                        input.feedback__input.popup-feedback__input.feedback__input-name(type="text",
+                                            name="name",
+                                            placeholder="Ваше имя")
+                        input.feedback__input.popup-feedback__input.feedback__input-tel(type="text",
+                                            name="phone-number",
+                                            placeholder="Ваше номер")
+                button(type="submit").feedback__btn
+                    | Отправить
         .mobile-call-btn
             a.mobile-call-btn__link(href="tel:+380985700075")
         .telegramm-fixed-btn

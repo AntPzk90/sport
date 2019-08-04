@@ -974,12 +974,11 @@ a {
       transform: translateX(-50%); } }
 
 .about-us__txt {
-  font-family: "helveticaneuecyr", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 200;
-  margin-bottom: 50px;
-  letter-spacing: 3px; }
+  margin-bottom: 50px; }
   @media screen and (max-width: 1050px) {
     .about-us__txt {
       font-size: 24px;
@@ -1713,6 +1712,7 @@ footer {
   background-color: rgba(154, 23, 10, 0.4); }
 
 .popup__form {
+  display: none;
   width: 90%;
   max-width: 440px;
   margin: 0 auto;
@@ -1722,7 +1722,8 @@ footer {
   margin-top: -162px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  z-index: 10; }
   @media screen and (max-width: 768px) {
     .popup__form {
       width: 300px;
@@ -1741,14 +1742,19 @@ footer {
 .popup-feedback__input {
   width: 100%; }
 
+.feedback__form--on {
+  display: block;
+  -webkit-animation: fadeIn .3s ease;
+  animation: fadeIn .3s ease; }
+
 .popup-feedback--on {
   display: block;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-  -webkit-animation: fadeIn .3s ease;
-  animation: fadeIn .3s ease; }
+  z-index: 1; }
 
 .popup-feedback--off {
   -webkit-animation: fadeOut .7s ease;
