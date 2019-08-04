@@ -11,17 +11,28 @@ var nav = document.querySelector(".header__navigation-list");
 var navList = document.querySelector(".header__navigation");
 var buyBtns = document.querySelectorAll(".buy-btn");
 var popup = document.querySelector(".popup-feedback");
+var body = document.querySelector("body");
 console.log(catalogItemsImgsAll)
 var buyBtnsClickHendler = function(item){
      item.addEventListener("click",function(evt){
           evt.preventDefault();
+          popup.classList.remove("popup-feedback--off");
           popup.classList.add("popup-feedback--on");
+          body.style.overflow = "hidden";
           var popupBtnClose = popup.querySelector(".popup-feedback__btn-close");
           popupBtnClose.addEventListener("click",function(evt){
                evt.preventDefault();
                popup.classList.remove("popup-feedback--on");
+               popup.classList.add("popup-feedback--off");
+               body.removeAttribute("style");
           });
-     })
+          popup.addEventListener("click", function(evt){
+               evt.preventDefault();
+               popup.classList.remove("popup-feedback--on");
+               popup.classList.add("popup-feedback--off");
+               body.removeAttribute("style");
+          });
+     });
 }
 for(var j = 0; j < buyBtns.length; j++){
      buyBtnsClickHendler(buyBtns[j]);
@@ -41,13 +52,17 @@ var overHendler = function(item){
      });
      item.addEventListener("touchend",function(evt){
           evt.preventDefault();
-          this.classList.toggle("catalog-list__item--shadow");
-          var subCatalog = this.querySelector(".catalog-list__sub-list");
-          subCatalog.classList.toggle("catalog-list__item--active");
+          this.parentElement.classList.toggle("catalog-list__item--shadow");
+          var subCatalog = this.parentElement.querySelector(".catalog-list__sub-list");
+          subCatalog.classList.add("catalog-list__item--active");
+          subCatalog.addEventListener("touchend", function(evt){
+               evt.preventDefault();
+               subCatalog.classList.remove("catalog-list__item--active");
+          });
      });
 }
-for (var i = 0; i < catalogItemsAll.length; i++) {
-     overHendler(catalogItemsAll[i]);
+for (var i = 0; i < catalogItemsImgsAll.length; i++) {
+     overHendler(catalogItemsImgsAll[i]);
 }
 
 mobileBtn.addEventListener("click",function(evt){

@@ -1,0 +1,29 @@
+.mobile-call-btn{
+    display: none;
+    @media screen and (max-width:$tablet){
+        display: block;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        z-index: 5;
+        -webkit-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+        -moz-box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+        box-shadow: 0px 0px 26px 9px rgba(13,14,17,1);
+        animation: shadow 1s ease-in infinite;
+    }
+}
+.mobile-call-btn__link{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $black;
+    background-image: url("../imgs/icon-call.png");
+    background-size: 30px 30px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: 5;
+}
