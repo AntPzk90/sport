@@ -2,17 +2,16 @@ mixin catalog_list(items)
     each item in items
         li.catalog-list__item
                         img.catalog-list__img(src=item.src, alt="catalog-list-image")
-                        h3.catalog-list__item-title
-                            | bondenole
+                        h3.catalog-list__item-title=(item.title)
                         ul.catalog-list__sub-list
                             li.catalog-list__sub-list-item
                                 span.catalog-list__item-position
                                     | Производитель : 
-                                span.catalog-list__item-value=(item.title)
+                                span.catalog-list__item-value=(item.manufacturer)
                             li.catalog-list__sub-list-item
                                 span.catalog-list__item-position
                                     | Действ. вещество : 
-                                span.catalog-list__item-value=(item.manufacturer)
+                                span.catalog-list__item-value=(item.substance)
                             li.catalog-list__sub-list-item
                                 span.catalog-list__item-position
                                     | Дозировка : 
@@ -25,6 +24,7 @@ mixin catalog_list(items)
                         .catalog-list__user-wrapper
                             a.buy-btn.buy-btn--catalog.catalog-list__btn(href="#")
                                 |Заказать
-                            a.telegramm-btn.telegramm-btn--catalog.catalog-list__btn(href="tg://")
+                            a.telegramm-btn.telegramm-btn--catalog.catalog-list__btn(href="https://t.me/steroid-house")
                                 | telegramm  
+
                                 

@@ -2,13 +2,14 @@
     @include list-reset;
     justify-content: space-between;
     display: flex;
+    align-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
 }
 .catalog-list__item{
     width: 264px;
     position: relative;
-    min-height: 373px;
+    //min-height: 373px;
     background-image: url("../imgs/catalog-list__bg-item.png");
     background-size: cover;
     background-repeat: no-repeat;

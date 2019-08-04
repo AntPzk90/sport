@@ -1292,6 +1292,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -1302,7 +1304,6 @@ a {
 .catalog-list__item {
   width: 264px;
   position: relative;
-  min-height: 373px;
   background-image: url("../imgs/catalog-list__bg-item.png");
   background-size: cover;
   background-repeat: no-repeat;
