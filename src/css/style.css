@@ -1832,7 +1832,7 @@ footer {
 .telegramm-fixed-btn {
   display: block;
   position: fixed;
-  bottom: 50px;
+  bottom: 20px;
   right: 40px;
   width: 80px;
   height: 80px;
@@ -1883,7 +1883,7 @@ footer {
 .up-btn {
   display: none;
   position: fixed;
-  bottom: 50px;
+  bottom: 20px;
   left: 40px;
   width: 80px;
   height: 80px;
