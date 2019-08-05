@@ -39,9 +39,12 @@ const styleFiles = [
 //Порядок подключения js файлов
 const scriptFiles = [
    './src/js/lib.js',
-   './src/js/main.js'
+   './src/js/main.js',
 ]
-
+const jqery = [
+   './src/js/jqery-min3.4.1.js',
+   './src/js/jqcode.js'
+]
 //Таск для обработки стилей
 gulp.task('styles', () => {
    //Шаблон для поиска файлов CSS
@@ -86,7 +89,18 @@ gulp.task('scripts', () => {
       .pipe(gulp.dest('./build/js'))
       .pipe(browserSync.stream());
 });
-
+gulp.task('jqery', () => {
+   //Шаблон для поиска файлов JS
+   return gulp.src(jqery)
+      //Объединение файлов в один
+      //Минификация JS
+      .pipe(uglify({
+         toplevel: true
+      }))
+      //Выходная папка для скриптов
+      .pipe(gulp.dest('./build/js'))
+      .pipe(browserSync.stream());
+});
 //Таск для очистки папки build
 gulp.task('del', () => {
    return del(['build/*'],{dryRun: true})
@@ -154,11 +168,11 @@ gulp.task('watch', () => {
    //Следить за файлами со стилями с нужным расширением
    gulp.watch('./src/sass/**/*.scss', gulp.series('styles'))
    //Следить за JS файлами
-   gulp.watch('./src/js/**/*.js', gulp.series('scripts'))
+   gulp.watch('./src/js/**/*.js', gulp.series('scripts','jqery'))
    //При изменении HTML запустить синхронизацию
    gulp.watch('./src/pug/**/*.pug', gulp.series('pug'))
    gulp.watch("./build/*.html").on('change', browserSync.reload);
 });
 
 //Таск по умолчанию, Запускает del, styles, scripts и watch
-gulp.task('start', gulp.series('del', gulp.parallel('styles', 'scripts','image-compress','svg-sprite','pug'), 'watch'));
+gulp.task('start', gulp.series('del', gulp.parallel('styles', 'scripts','jqery','image-compress','svg-sprite','pug'), 'watch'));

@@ -13,7 +13,7 @@ var buyBtns = document.querySelectorAll(".buy-btn");
 var popup = document.querySelector(".popup-feedback");
 var popupForm = document.querySelector(".popup__form");
 var body = document.querySelector("body");
-console.log(catalogItemsImgsAll)
+var upBtn = document.querySelector(".up-btn");
 //нажатие на кнопку появления попапа
 var buyBtnsClickHendler = function(item){
      item.addEventListener("click",function(evt){
@@ -95,12 +95,17 @@ var scrolling = window.scrollY;
 if(scrolling > 0){
      header.classList.add("header--fixed");
 }
+
 window.addEventListener("scroll", function(evt){
      var scrolling = window.scrollY;
      if(scrolling > 150){
           header.classList.add("header--fixed");
+          if(scrolling > 800){
+               upBtn.classList.add("up-btn--on");
+          }
      }else{
           header.classList.remove("header--fixed");
+          upBtn.classList.remove("up-btn--on")
      }
      bg.style.backgroundPosition = "50% " + scrolling/5 + "px";
      var h = advantages.getBoundingClientRect();
@@ -120,6 +125,8 @@ window.addEventListener("scroll", function(){
    }
    scrollPos = st;
 });
+
+
 // // header animate
 // ScrollReveal().reveal(".header__logo",{delay: 200,duration: 200,distance:"50px",reset: true});
 // ScrollReveal().reveal(".header__main-nav",{delay: 200,duration: 200,distance:"50px",reset: true});

@@ -1,7 +1,7 @@
 extends .././layouts/main-layout.pug
 block content
     main.main
-        section.start-screen
+        section.start-screen(id="body")
             .start-screen__paralax-wrapper
                 .start-screen__wrapper.container
                     .start-screen__title-wrapper
@@ -20,7 +20,7 @@ block content
                                 | Купить сейчас
                             a.telegramm-btn(href="https://t.me/steroid-house")
                                 | Заказать в telegramm
-        section.about-us
+        section.about-us(id="about-us")
             .about-us__paralax-wrapper
                 .about-us__wrapper.container
                     .about-us__content
@@ -101,7 +101,7 @@ block content
                             | nostrum illo accusantium ducimus recusandae facilis
                             | assumenda hic vitae? Dolorum deserunt 
                             | sit rerum quos rem iure fuga libero quo.
-        section.spectrum-catalog
+        section.spectrum-catalog(id="spectrum")
             .spectrum-catalog__wrapper.container
                 h2.spectrum-catalog__title.catalog-title
                     | Каталог
@@ -110,7 +110,7 @@ block content
                         | spectrum pharm
                 ul.spectrum-catalog__list.catalog-list
                     +catalog_list(catalog_list_items_spectrum)
-        section.zhengzhou-catalog
+        section.zhengzhou-catalog(id="zheng")
             .zhengzhou-catalog__wrapper.container
                 h2.zhengzhou-catalog__title.catalog-title
                     | Каталог
@@ -121,7 +121,7 @@ block content
                     +catalog_list(catalog_list_items_zhengzhou)
                 //a.zhengzhou-catalog__see-more(href="#")
                     | Показать больше
-        section.delivery
+        section.delivery(id="delivery")
             .delivery__paralax-wrapper
                 .delivery__wrapper.container
                     h2.delivery__title.mini-title
@@ -182,6 +182,8 @@ block content
             a.mobile-call-btn__link(href="tel:+380985700075")
         .telegramm-fixed-btn
             a.telegramm-fixed-btn__link(href="https://t.me/steroid-house")
+        .up-btn
+            a.up-btn__link(href="#body")
 
 
 
