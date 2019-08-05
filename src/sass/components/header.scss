@@ -77,6 +77,10 @@
         top:60px;
         left:-90%;
         width: 75%;
+        border-right: 1px solid $red;
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(154,23,10,.7);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(154,23,10,.7);
+        box-shadow: 5px 5px 5px 0px rgba(154,23,10,.7);
     }
     @media screen and (max-width:$mobile){
         border-right: 1px solid $red;
@@ -174,6 +178,7 @@
 .header__mobile-btn{
     display: none;
     @media screen and (max-width:$tablet){
+        outline-color: $red;
         border:none;
         display: block;
         width: 50px;
