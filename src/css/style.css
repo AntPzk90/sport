@@ -1414,7 +1414,7 @@ a {
 
 .zhengzhou-catalog {
   min-height: 1200px;
-  background: url("../imgs/product-preview_title-fire.png") no-repeat 50% 0px, url("../imgs/spectrum-catalog_left-fire.png") no-repeat 0px 400px;
+  background: url("../imgs/product-preview_title-fire.png") no-repeat 50% 0px, url("../imgs/spectrum-catalog_left-fire.png") no-repeat 0px 400px, url("../imgs/start_screen_fire1.png") no-repeat 100% 80%;
   position: relative;
   padding: 100px; }
   @media screen and (max-width: 1050px) {
@@ -1563,22 +1563,28 @@ footer {
 
 .footer__social {
   min-height: 320px;
+  width: 700px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
   @media screen and (max-width: 768px) {
     .footer__social {
-      min-height: 200px; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-height: 200px;
+      width: 280px;
+      text-align: center; } }
 
 .footer__social-list {
   list-style: none;
@@ -1591,6 +1597,25 @@ footer {
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 50px; }
+  @media screen and (max-width: 768px) {
+    .footer__copyr {
+      font-size: 18px;
+      margin-top: 25px; } }
+
+.footer__email {
+  margin-top: 50px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+  border-bottom: 2px solid #9a170a; }
+  @media screen and (max-width: 768px) {
+    .footer__email {
+      font-size: 18px;
+      margin-top: 25px;
+      margin-bottom: 20px; } }
+
+.footer__email-link:hover, .footer__email-link:active {
+  color: #9a170a; }
 
 .feedback__form {
   width: 980px;
@@ -1870,9 +1895,8 @@ footer {
   animation: shadow 1s ease-in infinite; }
   @media screen and (max-width: 1050px) {
     .up-btn {
-      display: block;
       position: fixed;
-      bottom: 90px;
+      bottom: 10px;
       right: 10px;
       width: 60px;
       height: 60px;
@@ -1892,9 +1916,7 @@ footer {
   background-size: 40px 45px;
   background-position: 50%;
   background-repeat: no-repeat;
-  border-radius: 50%;
-  -webkit-animation: shadow 1s ease-in infinite;
-  animation: shadow 1s ease-in infinite; }
+  border-radius: 50%; }
   @media screen and (max-width: 1050px) {
     .up-btn__link {
       display: block;
