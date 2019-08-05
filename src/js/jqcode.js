@@ -13,7 +13,7 @@ $(".up-btn__link").click(function(){
 });
 var container = $(".container").width();
     if(container<= 1050){
-        $('a[href*="#"]').click(function() {
+        $('.header__list-link').click(function() {
             $(".header__mobile-btn").removeClass("header__mobile-btn--close");
             $(".header__navigation").removeClass("header__navigation-list--on");
             $(".header__navigation").addClass("header__navigation-list--off");
